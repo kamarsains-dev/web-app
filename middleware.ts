@@ -1,8 +1,8 @@
 import { clerkMiddleware } from "@clerk/nextjs/server";
 
-const isStaticExport = process.env.NEXT_PUBLIC_EXPORT === "true";
+console.log("Middleware is running!")
 
-export default isStaticExport ? () => {} : clerkMiddleware();
+export default clerkMiddleware();
 
 export const config = {
   matcher: [
