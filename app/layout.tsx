@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
+import InfoBar from "@/components/infobar";
+import { Header } from "./header";
 
 const font = Space_Grotesk({
   variable: "--font-spacegrotesk",
@@ -27,6 +29,8 @@ export default function RootLayout({
       <body
         className={font.className}
       >
+        <InfoBar/>
+        <Header/>
         {children}
       </body>
     </html>
